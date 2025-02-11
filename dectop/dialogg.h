@@ -5,4 +5,4 @@
 extern QString ab,nt;
 
 
-#endif // DIALOGG_H
+#endif 
