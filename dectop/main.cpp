@@ -3,7 +3,7 @@
 #include <QApplication>
 
 /**
-* @brief my decripshion in this code  and i was controled function in this code n1
+* @brief my decripshion in this code  and i was controled function in this code 
  
 */
 int main(int argc, char *argv[])
