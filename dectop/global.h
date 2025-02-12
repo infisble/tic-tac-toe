@@ -5,4 +5,4 @@
 
 extern QString a,n;
 
-#endif // GLOBAL_H
+#endif 
