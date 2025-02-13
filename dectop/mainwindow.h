@@ -40,4 +40,4 @@ void tooo(QString);
 private:
     Ui::MainWindow *ui;
 };
-#endif // MAINWINDOW_H
+#endif 
