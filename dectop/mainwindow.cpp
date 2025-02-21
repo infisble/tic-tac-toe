@@ -1,15 +1,18 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dialogg.h"
-int a=0,ty = 0,xin=0,oin=0;
+
+int a=0,ty=0,xin=0,oin=0;
+const QString PLAYER_X = "X";
+const QString PLAYER_O = "O"; 
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-ui->label->setText(ab+"\t X");
-ui->label_2->setText(nt+"\t O");
+ui->label->setText(ab+"\t "+PLAYER_X);
+ui->label_2->setText(nt+"\t "+PLAYER_O);
 
 }
 
@@ -18,14 +21,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 void MainWindow::tooo(QString g){
-if(g=="X"||g=="O"){
-    if(g=="X"){
+if(g==PLAYER_X||g==PLAYER_O){
+    if(g==PLAYER_X){
 if(ty%2!=0){
 xin++;
 }
 oin++;
     }
-    if(g=="O"){
+    if(g==PLAYER_O){
 if(ty%2!=0){
 oin++;
 }
@@ -177,9 +180,9 @@ touch();}
 void MainWindow::on_pushButton_11_clicked()
 {
  a=0;
-    ui->pushButton_8->setText(" ");
- ui->pushButton_9->setText(" ");
- ui->pushButton_7->setText(" ");
+ui->pushButton_8->setText(" ");
+ui->pushButton_9->setText(" ");
+ui->pushButton_7->setText(" ");
 ui->pushButton_8->setEnabled(true);
 ui->pushButton_9->setEnabled(true);
 ui->pushButton_7->setEnabled(true);
@@ -197,13 +200,13 @@ ui->pushButton_3->setEnabled(true);
 ui->pushButton_2->setEnabled(true);
 ty++;
 if(ty%2==0){
-ui->label->setText(ab+"\t X");
-ui->label_2->setText(nt+"\t O");
+ui->label->setText(ab+"\t " +PLAYER_X);
+ui->label_2->setText(nt+"\t " +PLAYER_O);
 }
 else{
 
-    ui->label->setText(ab+"\t O");
-    ui->label_2->setText(nt+"\t X");
+    ui->label->setText(ab+"\t " +PLAYER_O);
+    ui->label_2->setText(nt+"\t " +PLAYER_X);
 
 }
 
